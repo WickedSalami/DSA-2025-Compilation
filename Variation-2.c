@@ -19,3 +19,14 @@ void makeNULL(EPtr L);
 void initialize(EPtr L) {
     L->count = 0;
 }
+
+void insertPos(EPtr L, int data, int position) {
+    int i;
+    if(position <= L->count) {
+        for(i = L->count; i > position; i--) {
+            L->elem[i] = L->elem[i-1];
+        }
+        L->elem[i] = data;
+        L->count++;
+    }
+}
