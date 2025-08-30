@@ -1,3 +1,4 @@
+// List is a static array and accessed by value
 #include <stdio.h>
 #define MAX 10
 
