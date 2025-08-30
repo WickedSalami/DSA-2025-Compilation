@@ -58,11 +58,13 @@ int locate(List L, int data) {
 }
 // insert sorted
 List insertSorted(List L, int data) {
-    int i = 0;
-    while (i < L.count && L.elem[i] < data) {
-        i++;
+    int i;
+    for(i = L.count; i > 0 && L.elem[i-1] > data; i--) {
+        L.elem[i] = L.elem[i-1]; // copies the element to the right
     }
-    return insertPos(L, data, i);
+    L.elem[i] = data;
+    L.count++;
+    return L;
 }
 // display
 void display(List L) {
