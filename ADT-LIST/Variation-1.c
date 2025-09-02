@@ -23,7 +23,6 @@ List initialize(List L) {
 // Insert at Position (index)
 List insertPos(List L, int data, int position) {
     int i;
-
     // check if there is available space
     if(L.count < MAX) {
         for(i = L.count; i > position; i--) {

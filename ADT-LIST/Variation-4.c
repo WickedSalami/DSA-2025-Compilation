@@ -1,5 +1,4 @@
 // List is a DYNAMIC ARRAY and accessed by POINTER
-
 #include <stdio.h>
 #include <stdlib.h>
 #define LENGTH 10
